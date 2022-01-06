@@ -1,6 +1,8 @@
 package com.picolli.pepperone.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,5 +26,6 @@ public class SaborCardapio {
     private Sabor sabor;
     @ManyToOne
     @JoinColumn(name = "id_cardapio")
+    @JsonIgnore
     private Cardapio cardapio;
 }

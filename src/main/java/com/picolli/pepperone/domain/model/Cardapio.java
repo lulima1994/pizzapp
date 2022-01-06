@@ -21,6 +21,6 @@ public class Cardapio {
     private String nome;
     @Column(length = 45)
     private String descricao;
-    @OneToMany
+    @OneToMany(mappedBy = "cardapio")
     private List<SaborCardapio> sabores = new ArrayList<>();
 }
