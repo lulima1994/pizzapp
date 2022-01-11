@@ -2,6 +2,7 @@ package com.picolli.pepperone.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.ToString;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.persistence.Column;
@@ -23,9 +24,11 @@ public class SaborCardapio {
     private BigDecimal preco;
     @ManyToOne
     @JoinColumn(name = "id_sabor")
+    @ToString.Exclude
     private Sabor sabor;
     @ManyToOne
     @JoinColumn(name = "id_cardapio")
     @JsonIgnore
+    @ToString.Exclude
     private Cardapio cardapio;
 }
