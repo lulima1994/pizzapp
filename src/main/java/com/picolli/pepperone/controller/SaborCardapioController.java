@@ -36,6 +36,10 @@ public class SaborCardapioController {
 
     @DeleteMapping("/cardapio/{idCardapio}/sabor/{idSabor}")
     public void deletar(@PathVariable Integer idCardapio, @PathVariable Integer idSabor) {
+        SaborCardapio saborCardapio = saborCardapioRepository
+                .findByIdCardapioAndIdSabor(idCardapio, idSabor)
+                .orElseThrow();
 
+        saborCardapioRepository.delete(saborCardapio);
     }
 }

@@ -1,8 +1,6 @@
 package com.picolli.pepperone.dto;
 
-import com.picolli.pepperone.domain.model.Cardapio;
 import lombok.Data;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.math.BigDecimal;
 
