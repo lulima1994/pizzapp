@@ -19,8 +19,6 @@ public class Cardapio {
     private Integer id;
     @Column(nullable = false, length = 45)
     private String nome;
-    @Column(length = 45)
-    private String descricao;
     @OneToMany(mappedBy = "cardapio")
     private List<SaborCardapio> sabores = new ArrayList<>();
 }

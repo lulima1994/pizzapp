@@ -10,5 +10,4 @@ public interface SaborCardapioRepository extends JpaRepository<SaborCardapio, In
 
     @Query("select sc from SaborCardapio sc where sc.cardapio.id = :idCardapio and sc.sabor.id = :idSabor")
     Optional<SaborCardapio> findByIdCardapioAndIdSabor(Integer idCardapio, Integer idSabor);
-
 }
