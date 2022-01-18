@@ -5,8 +5,6 @@ import lombok.Data;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Data
@@ -18,7 +16,6 @@ public class IngredienteSabor {
     @JoinColumn(name = "id_ingrediente")
     @ToString.Exclude
     private Ingrediente ingrediente;
-
     @ManyToOne
     @JoinColumn(name = "id_sabor")
     @JsonIgnore
